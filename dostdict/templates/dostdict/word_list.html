@@ -1,9 +1,8 @@
-<html>
-    <head>
-        <title>Dictionary</title>
-    </head>
-    <body>
-        <p>Hi there!</p>
-        <p>It works!</p>
-    </body>
-</html>
+{% extends 'dostdict/base.html' %}
+{% block content %}
+    {% for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" %}
+            <h1><a href="{% url 'starting_with' pk=letter %}">{{ letter }}</a> </h1>
+    {% endfor %}
+{% endblock %}
+
+
